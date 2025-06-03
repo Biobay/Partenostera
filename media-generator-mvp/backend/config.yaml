@@ -1,0 +1,33 @@
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+
+generation:
+  max_file_size: 50MB
+  supported_formats: [".txt", ".pdf", ".docx"]
+  max_sequences: 20
+  image_size: [1024, 1024]
+  video_fps: 24
+  audio_sample_rate: 22050
+
+models:
+  stable_diffusion:
+    model_id: "runwayml/stable-diffusion-v1-5"
+    device: "cuda"
+  tts:
+    model_name: "tts_models/multilingual/multi-dataset/xtts_v2"
+    language: "it"
+  veo:
+    api_endpoint: "https://api.veo.dev/v1"
+    api_key: "your-veo-api-key"
+
+validation:
+  min_image_quality: 0.7
+  max_generation_time: 300
+  content_safety: true
+
+storage:
+  output_path: "./data/outputs"
+  books_path: "./data/books"
+  temp_path: "./data/temp"

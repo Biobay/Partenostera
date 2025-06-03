@@ -1,0 +1,254 @@
+.user-selector {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.selector-section {
+  margin-bottom: 40px;
+}
+
+.selector-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.user-card:hover {
+  border-color: #2196F3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.user-card.selected {
+  border-color: #4CAF50;
+  background: #f1f8e9;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.user-avatar {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.mode-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mode-card:hover {
+  border-color: #2196F3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.mode-card.selected {
+  border-color: #4CAF50;
+  background: #f1f8e9;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.2);
+}
+
+.mode-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.mode-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.mode-info h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.mode-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.mode-features {
+  margin-bottom: 15px;
+}
+
+.mode-features h5 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mode-features ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mode-features li {
+  padding: 4px 0;
+  color: #666;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.mode-features li:before {
+  content: '•';
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.mode-selected-indicator {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #4CAF50;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.selection-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.summary-card h4 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.summary-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-label {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-selector {
+    padding: 15px;
+  }
+  
+  .users-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mode-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .summary-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    padding: 15px;
+  }
+  
+  .mode-card {
+    padding: 20px;
+  }
+}
