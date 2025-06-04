@@ -1,1 +1,0 @@
-# Media Generator MVP Backend
